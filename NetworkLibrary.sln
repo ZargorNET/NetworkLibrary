@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZNetLib.Core", "src\ZNetLib.Core\ZNetLib.Core.csproj", "{447D757B-3F41-4ED3-A8C5-3F6E2BF479F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Echo.Server", "samples\Echo.Server\Echo.Server.csproj", "{97BF7C0E-C30A-40FD-9BD5-8B70BC71DD70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Echo.Client", "samples\Echo.Client\Echo.Client.csproj", "{B4915539-F996-4286-AFD3-ED2CEAD44ADC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{447D757B-3F41-4ED3-A8C5-3F6E2BF479F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{447D757B-3F41-4ED3-A8C5-3F6E2BF479F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{447D757B-3F41-4ED3-A8C5-3F6E2BF479F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97BF7C0E-C30A-40FD-9BD5-8B70BC71DD70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97BF7C0E-C30A-40FD-9BD5-8B70BC71DD70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97BF7C0E-C30A-40FD-9BD5-8B70BC71DD70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97BF7C0E-C30A-40FD-9BD5-8B70BC71DD70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4915539-F996-4286-AFD3-ED2CEAD44ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4915539-F996-4286-AFD3-ED2CEAD44ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4915539-F996-4286-AFD3-ED2CEAD44ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4915539-F996-4286-AFD3-ED2CEAD44ADC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
