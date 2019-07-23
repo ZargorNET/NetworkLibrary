@@ -424,3 +424,7 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 # End of https://www.gitignore.io/api/rider,csharp
+
+# Own
+src/ZNetLib.Core/obj/
+src/ZNetLib.Core/bin/

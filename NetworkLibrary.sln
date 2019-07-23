@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{447D757B-3F41-4ED3-A8C5-3F6E2BF479F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZNetLib.Core", "src\ZNetLib.Core\ZNetLib.Core.csproj", "{447D757B-3F41-4ED3-A8C5-3F6E2BF479F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
