@@ -2,15 +2,25 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>ZargorsNetworkLibrary</PackageId>
+        <PackageVersion>0.0.1</PackageVersion>
+        <Title>ZargorNET</Title>
+        <Authors>ZargorNET</Authors>
+        <Description>A simple C# NetworkLibrary</Description>
+        <Copyright>ZargorNET</Copyright>
+        <PackageLicenseUrl>https://github.com/ZargorNET/NetworkLibrary/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/ZargorNET/NetworkLibrary</RepositoryUrl>
+        <RepositoryType>Git</RepositoryType>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="DotNetty.Buffers" Version="0.6.0"/>
-        <PackageReference Include="DotNetty.Codecs" Version="0.6.0"/>
-        <PackageReference Include="DotNetty.Common" Version="0.6.0"/>
-        <PackageReference Include="DotNetty.Handlers" Version="0.6.0"/>
-        <PackageReference Include="DotNetty.Transport" Version="0.6.0"/>
-        <PackageReference Include="NLog" Version="4.6.6"/>
+        <PackageReference Include="DotNetty.Buffers" Version="0.6.0" />
+        <PackageReference Include="DotNetty.Codecs" Version="0.6.0" />
+        <PackageReference Include="DotNetty.Common" Version="0.6.0" />
+        <PackageReference Include="DotNetty.Handlers" Version="0.6.0" />
+        <PackageReference Include="DotNetty.Transport" Version="0.6.0" />
+        <PackageReference Include="NLog" Version="4.6.6" />
     </ItemGroup>
 
 </Project>
