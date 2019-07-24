@@ -30,7 +30,7 @@ namespace ZNetLib.Core.Packet
 				return;
 			}
 
-			output.WriteInt((int) id);
+			output.WriteUnsignedShort((ushort) id);
 			outPacket.Write(output);
 		}
 	}

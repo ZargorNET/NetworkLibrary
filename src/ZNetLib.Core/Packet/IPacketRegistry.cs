@@ -4,12 +4,12 @@ namespace ZNetLib.Core.Packet
 {
 	public interface IPacketRegistry : IDisposable
 	{
-		void RegisterPacket<T>(T packet, int id) where T : IPacket, new();
+		void RegisterPacket<T>(T packet, ushort id) where T : IPacket, new();
 
-		void DeregisterPacket(int id);
+		void DeregisterPacket(ushort id);
 
-		IPacket CreateNewPacket(int id);
+		IPacket CreateNewPacket(ushort id);
 
-		int? GetPacketId(IPacket packet);
+		ushort? GetPacketId(IPacket packet);
 	}
 }

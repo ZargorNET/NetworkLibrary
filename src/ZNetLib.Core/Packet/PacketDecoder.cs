@@ -25,7 +25,7 @@ namespace ZNetLib.Core.Packet
 				return;
 			}
 
-			var id = input.ReadInt();
+			var id = input.ReadUnsignedShort();
 			var packet = _packetRegistry.CreateNewPacket(id);
 			if (packet == null)
 			{
