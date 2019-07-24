@@ -23,7 +23,7 @@ namespace Echo.Server
 
 			bootstrap.PacketHandlerRegistry.RegisterPacketHandler(typeof(PacketHandler));
 
-			await bootstrap.Start(new IPEndPoint(IPAddress.Any, 8080)); // Keep the main thread running
+			await bootstrap.StartAsync(new IPEndPoint(IPAddress.Any, 8080)); // Keep the main thread running
 			Console.WriteLine("Closed!");
 		}
 	}
