@@ -1,9 +1,10 @@
-# NetworkLibrary
-## By Zargor
+# ZNetworkLib
+### Current status: In development; major changes may occur.
 
-## Warning: Currently not finished!
-
-## TODO
-- [] Document everything
-- [] Add encryption support
-- [] Add unit tests
+## Todo
+- [ ] Add Unit tests
+- [ ] Add full documentation
+- [ ] Add encryption support
+- [ ] Add compression support
+- [ ] Add CI (e.g, Travis)
+- [ ] Clean up the IPacketHandlerRegistry and DefaultPacketHandlerRegistry
