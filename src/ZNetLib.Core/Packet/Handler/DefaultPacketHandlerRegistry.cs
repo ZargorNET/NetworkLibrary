@@ -32,6 +32,14 @@ namespace ZNetLib.Core.Packet.Handler
 			}
 		}
 
+		public void DeregisterPacketHandler(Type packetHandler)
+		{
+			lock (_lock)
+			{
+				_registry.Remove(packetHandler);
+			}
+		}
+
 		public PacketHandler CreatePacketHandler(int index, IConnection connection)
 		{
 			Type type;

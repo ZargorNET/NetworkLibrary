@@ -7,6 +7,8 @@ namespace ZNetLib.Core.Packet.Handler
 	{
 		void RegisterPacketHandler(params Type[] packetHandler);
 
+		void DeregisterPacketHandler(Type packetHandler);
+
 		PacketHandler CreatePacketHandler(int index, IConnection connection);
 
 		PacketHandler CreateDefaultPacketHandler(IConnection connection);
