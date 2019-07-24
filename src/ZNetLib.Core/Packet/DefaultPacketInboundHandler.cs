@@ -1,3 +1,4 @@
+using System;
 using DotNetty.Transport.Channels;
 using ZNetLib.Core.Connection;
 using ZNetLib.Core.Packet.Handler;
@@ -31,6 +32,13 @@ namespace ZNetLib.Core.Packet
 		{
 			if (_connection == null) return;
 			_connectionRegistry.DeregisterConnection(_connection);
+			_connection.DisconnectAsync();
+		}
+
+		public override void ExceptionCaught(IChannelHandlerContext context, Exception exception)
+		{
+			_networkBootstrap.GetLogger().Error("Exception caught in channel {}! Closing channel: \n{}",
+				_connection.GetChannel(), exception);
 			_connection.DisconnectAsync();
 		}
 	}

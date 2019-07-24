@@ -30,21 +30,27 @@ namespace ZNetLib.Core.Packet
 			if (packet == null)
 			{
 				_networkBootstrap.GetLogger().Warn("Incoming packet did not have an id");
+				input.Clear();
 				return;
 			}
 
 			if (!(packet is IInPacket inpacket))
 			{
 				_networkBootstrap.GetLogger().Warn($"Incoming packet with the id {id} is not declared as incoming");
+				input.Clear();
 				return;
 			}
 
-			inpacket.Read(input);
-			if (input.ReadableBytes < 0)
+			try
+			{
+				inpacket.Read(input);
+			}
+			catch (IndexOutOfRangeException)
 			{
 				_networkBootstrap.GetLogger()
 					.Warn(
-						$"Incoming packet with the id {id} was {Math.Abs(input.ReadableBytes)} bytes smaller than expected");
+						$"Incoming packet with the id {id} was smaller than expected");
+				input.Clear();
 				return;
 			}
 
@@ -52,9 +58,12 @@ namespace ZNetLib.Core.Packet
 			{
 				_networkBootstrap.GetLogger()
 					.Warn($"Incoming packet with id {id} was {input.ReadableBytes} bytes larger than expected");
+				input.Clear();
 				return;
 			}
 
+			input.Clear();
+			output.Clear();
 			output.Add(inpacket);
 		}
 	}
