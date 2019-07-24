@@ -52,7 +52,7 @@ namespace ZNetLib.Core
 			PacketHandlerRegistry = packetHandlerRegistry ?? new DefaultPacketHandlerRegistry(this, ConnectionRegistry);
 		}
 
-		public async Task Start(IPEndPoint address)
+		public async Task StartAsync(IPEndPoint address)
 		{
 			if (IsActive()) throw new InvalidOperationException("Bootstrap is already active");
 			_active = true;
@@ -88,7 +88,7 @@ namespace ZNetLib.Core
 					}
 					finally
 					{
-						await FinallyStop();
+						await FinallyStopAsync();
 					}
 
 					break;
@@ -115,7 +115,7 @@ namespace ZNetLib.Core
 					}
 					finally
 					{
-						await FinallyStop();
+						await FinallyStopAsync();
 					}
 
 					break;
@@ -124,7 +124,7 @@ namespace ZNetLib.Core
 			}
 		}
 
-		public Task Stop()
+		public Task StopAsync()
 		{
 			_active = false;
 			return Task.CompletedTask;
@@ -152,7 +152,7 @@ namespace ZNetLib.Core
 			PacketHandlerRegistry.Dispose();
 		}
 
-		private async Task FinallyStop()
+		private async Task FinallyStopAsync()
 		{
 			PacketHandlerRegistry.StopTicking();
 			if (BootstrapType == BootstrapTypeEnum.Server)

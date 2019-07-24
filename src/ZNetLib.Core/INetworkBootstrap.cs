@@ -7,9 +7,9 @@ namespace ZNetLib.Core
 {
 	public interface INetworkBootstrap : IDisposable
 	{
-		Task Start(IPEndPoint address);
+		Task StartAsync(IPEndPoint address);
 
-		Task Stop();
+		Task StopAsync();
 
 		bool IsActive();
 
